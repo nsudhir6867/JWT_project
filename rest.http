@@ -1,0 +1,42 @@
+
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODc4NDkzOTcsImV4cCI6MTY4Nzg1Mjk5NywiYXVkIjoiNjQ5YTg4ZDY4MTFmYjVlMzY4ZGJmMzg5IiwiaXNzIjoibXl3ZWJzaXRlLmNvbSJ9.plUNR7EVqb1RS_5_eJIjRPmr6UoDMwrlFDyFwFCzPUg
+
+##
+
+###Login Route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "sid@gmail.com",
+    "password": "hello1234"
+}
+
+
+
+###Register Route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "sid@gmail.com",
+    "password": "hello1234"
+}
+
+
+###Refresh token Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODc4NDkzOTcsImV4cCI6MTcxOTQwNjk5NywiYXVkIjoiNjQ5YTg4ZDY4MTFmYjVlMzY4ZGJmMzg5IiwiaXNzIjoibXl3ZWJzaXRlLmNvbSJ9._8twz3goz-BrBkKATjDwpbzFK_MVmMy7Mqeip7HccI0"
+}
+
+###Logout Route
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODc4NDkxNzUsImV4cCI6MTcxOTQwNjc3NSwiYXVkIjoiNjQ5YTg4ZDY4MTFmYjVlMzY4ZGJmMzg5IiwiaXNzIjoibXl3ZWJzaXRlLmNvbSJ9.GEvDAiMSvLRAXy3nMJya5i8UJsANh8FQ1sONFFuuhso"
+}
